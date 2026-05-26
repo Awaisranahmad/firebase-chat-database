@@ -1,0 +1,57 @@
+{
+  "collections": {
+    "users": {
+      "description": "User profiles",
+      "documents": [
+        {
+          "id": "ali_uid",
+          "fields": {
+            "name": "Ali Ahmed",
+            "email": "ali@chatapp.com",
+            "age": 25,
+            "city": "Karachi",
+            "isOnline": false,
+            "language": "Urdu",
+            "messagesCount": 156
+          }
+        },
+        {
+          "id": "fatima_uid",
+          "fields": {
+            "name": "Fatima Khan",
+            "email": "fatima@chatapp.com",
+            "age": 28,
+            "city": "Islamabad",
+            "isOnline": true,
+            "language": "English",
+            "messagesCount": 342
+          }
+        }
+      ]
+    },
+    "messages": {
+      "description": "Chat messages",
+      "fields_example": {
+        "senderId": "ali_uid",
+        "receiverId": "fatima_uid",
+        "senderName": "Ali Ahmed",
+        "receiverName": "Fatima Khan",
+        "text": "Hello!",
+        "timestamp": "2024-06-15T10:00:00Z",
+        "isRead": false,
+        "reaction": { "like": [], "love": [] }
+      }
+    },
+    "chats": {
+      "description": "Conversation metadata",
+      "fields_example": {
+        "participants": ["ali_uid", "fatima_uid"],
+        "participantNames": ["Ali Ahmed", "Fatima Khan"],
+        "lastMessage": "Hello!",
+        "lastMessageTime": "2024-06-15T10:00:00Z",
+        "unreadCount": { "ali_uid": 0, "fatima_uid": 1 },
+        "isGroup": false
+      }
+    }
+  }
+}
